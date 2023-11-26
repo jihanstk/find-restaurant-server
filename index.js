@@ -4,6 +4,9 @@ const cors = require("cors");
 
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("hello from Find Restaurant");
+});
 app.get("/restaurant", (req, res) => {
   res.send([
     { restaurant_name: "Green Leaf 1", state: "Georgia" },
